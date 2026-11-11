@@ -1,0 +1,8 @@
+name: Caller observation
+
+on:
+  workflow_dispatch:
+
+jobs:
+  call:
+    uses: staz0t/angular-workflow-ref-probe-20261111/.github/workflows/callee.yml@afe41b2ed03f069315fbe17a701ed9503a8b699f
