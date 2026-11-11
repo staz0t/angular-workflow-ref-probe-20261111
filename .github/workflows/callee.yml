@@ -1,0 +1,13 @@
+name: Callee observation
+
+on:
+  workflow_call:
+
+jobs:
+  observe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print reusable-workflow identity
+        run: |
+          printf 'WORKFLOW_REF=%s\n' '${{ github.workflow_ref }}'
+          printf 'WORKFLOW_SHA=%s\n' '${{ github.workflow_sha }}'
